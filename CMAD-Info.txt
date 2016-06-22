@@ -1,0 +1,28 @@
+
+CMAD Project Deployment Info 
+————————————————————————————
+
+
+1. Bring up 2 containers running MongoDB. Populate one with User/Company data and the other with Blog/Comments data.
+
+2. Modify the MongoDB hostname and port number in 2 of the Verticles (cmad-ms-user and cmad-ms-blog) to reflect these 2 containers. Re-build these 2 projects.
+
+3. In haproxy.cfg, specify the hostname:port to be used for the above 2 verticles.
+
+4. Deploy haproxy in another container. Modify the URLs in app.js in cmad-ms-gui project to reflect the haproxy host and port number. 
+
+5. Re-build the cmad-ms-gui project.
+
+6. Deploy 3 verticles in 3 containers (cmad-ms-gui, cmad-ms-user, cmad-ms-blog).
+
+7. Test communication with DB and interaction with each other via HAProxy.
+
+
+
+TODO 
+————
+
+a) Tokens
+b) Web-Sockets
+c) Jenkins integration
+d) Test Cases (??) 
